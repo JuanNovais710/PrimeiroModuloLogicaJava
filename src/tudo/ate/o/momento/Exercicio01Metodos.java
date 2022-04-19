@@ -18,10 +18,10 @@ public class Exercicio01Metodos {
         }
         imprimirTraco();
         String[] formasPagamento = new String[]{"Cartão", "Boleto"};
-        System.out.println("Escolha dentre as formas de pagamento abaixo: ");
+        imprimir("Escolha dentre as formas de pagamento abaixo: ");
         iterarVetor(formasPagamento);
 
-        System.out.print("Sua forma de pagamento escolhida é: ");
+        imprimir("Sua forma de pagamento escolhida é: ");
         Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
         posicaoValida = posicaoFormaPagamentoEscolhida >= 0 && posicaoFormaPagamentoEscolhida < formasPagamento.length;
         if (!posicaoValida) {
@@ -30,7 +30,7 @@ public class Exercicio01Metodos {
         String cursoEscolhido = cursos[posicaoCursoEscolhido];
         String formaPagamentoEscolhida = formasPagamento[posicaoFormaPagamentoEscolhida];
         imprimirTraco();
-        System.out.println("O curso escolhido foi " + cursoEscolhido + " e a forma de pagamento é " + formaPagamentoEscolhida);
+        imprimir("O curso escolhido foi " + cursoEscolhido + " e a forma de pagamento é " + formaPagamentoEscolhida);
         scanner.close();
     }
 
@@ -46,8 +46,11 @@ public class Exercicio01Metodos {
 
     static void iterarVetor(String[] vetor) {
         for (int i = 0; i < vetor.length; i++) {
-            System.out.println("[" + i + "] " + vetor[i]);
+            imprimir("[" + i + "] " + vetor[i]);
         }
+    }
+    static void imprimir(String texto) {
+        System.out.println(texto);
     }
 }
 
